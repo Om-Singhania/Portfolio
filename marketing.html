@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- stylesheet -->
+    <!-- <link rel="stylesheet" href=".css"> -->
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <title>MARKETING</title>
+
+
+    <style>
+        @keyframes bounce {
+            from {
+                top: 0px;
+            }
+            to {
+                top: -15px;
+            }
+        }
+        
+        .abc {
+            height: 100vh;
+        }
+        
+        .firstslider .slick-dots {
+            list-style-type: none;
+            position: absolute;
+            top: 41.5%;
+            right: 1vw;
+        }
+        
+        .firstslider .slick-dots li {
+            margin: 0.5rem 0;
+        }
+        
+        .firstslider .slick-dots button {
+            display: block;
+            width: .5rem;
+            height: 1.5rem;
+            padding: 0;
+            border: none;
+            border-radius: 35px;
+            background-color: #D0D0D0;
+            text-indent: -9999px;
+        }
+        
+        .firstslider .slick-dots li.slick-active button {
+            background-color: #737373;
+        }
+        
+        .firstslider .slider-container {
+            transition-duration: 1000ms;
+            background-color: #D5F8FD;
+            /* border-left: 22px solid #0D5705; */
+        }
+        
+        .yourstruly h2 {
+            color: #2D38AC;
+            font-size: 6.5vw;
+            font-family: NanumMyeongjo;
+            font-weight: 600;
+        }
+        
+        i.fas.fa-arrow-right {
+            color: #5A2367;
+        }
+        
+        i.fas.fa-arrow-left {
+            color: #5A2367;
+        }
+        
+        .yourstruly p {
+            font-size: 1.125rem;
+            color: #000;
+        }
+        
+        .yourstruly span {
+            color: #444;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .drinkbev h2 {
+            color: #DE2427;
+            font-size: 6.5vw;
+            font-family: NanumMyeongjo;
+            font-weight: 600;
+        }
+        
+        .drinkbev p {
+            font-size: 1.125rem;
+        }
+        
+        .drinkbev span {
+            color: #444;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .awesomewebb h2 {
+            color: #022C5B;
+            font-size: 6.5vw;
+            font-family: NanumMyeongjo;
+            font-weight: 600;
+        }
+        
+        .awesomewebb p {
+            font-size: 1.125rem;
+            color: #000;
+        }
+        
+        .awesomewebb span {
+            color: #444444;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        i.fas.fa-arrow-right {
+            color: #5A2367;
+        }
+        
+        a.case-study-1 {
+            text-decoration: none;
+        }
+        
+        .labella h2 {
+            color: #970030;
+            font-size: 6.5vw;
+            font-family: NanumMyeongjo;
+            font-weight: 600;
+        }
+        
+        .labella p {
+            font-size: 1.125rem;
+            color: #970030;
+        }
+        
+        .labella span {
+            color: #444;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        body {
+            overflow: hidden;
+        }
+        
+        .slider-nav .slick-slide.slick-current img {
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transition-duration: 1300ms;
+            filter: grayscale(0);
+            animation: bounce 1s infinite alternate;
+            position: relative;
+        }
+        
+        .slider-nav .slick-slide img {
+            transform: matrix3d(1, 0, 0, 0, 0.3, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.25);
+            transition-duration: 1300ms;
+            filter: grayscale(100);
+        }
+        
+        .secondslider {
+            display: none;
+        }
+        /*******************************************/
+        
+        @media only screen and (max-width:992px) {
+            .secondslider {
+                display: block;
+            }
+            .yourstruly h2 {
+                /* color: #ED0C36; */
+                font-size: 8.5vw;
+                font-family: NanumMyeongjo;
+                font-weight: 600;
+            }
+            .yourstruly p {
+                font-size: 1rem;
+            }
+            .yourstruly span {
+                /* color: #ED0C36; */
+                font-weight: 700;
+                font-size: 1.25rem;
+            }
+            .drinkbev h2 {
+                color: #DE2427;
+                font-size: 8.5vw;
+                font-family: NanumMyeongjo;
+                font-weight: 600;
+            }
+            .drinkbev p {
+                font-size: 1rem;
+            }
+            .drinkbev span {
+                /* color: #DE2427; */
+                font-weight: 700;
+                font-size: 1.25rem;
+            }
+            .awesomewebb h2 {
+                /* color: #1B7311; */
+                font-size: 8.5vw;
+                font-family: NanumMyeongjo;
+                font-weight: 600;
+            }
+            .awesomewebb p {
+                font-size: 1rem;
+                color: #000;
+            }
+            .awesomewebb span {
+                /* color: #5A2367; */
+                font-weight: 700;
+                font-size: 1.25rem;
+            }
+            .labella h2 {
+                /* color: #B79A72; */
+                font-size: 8.5vw;
+                font-family: NanumMyeongjo;
+                font-weight: 600;
+            }
+            .labella p {
+                font-size: 1rem;
+                /* color: white; */
+            }
+            .labella span {
+                /* color: #B79A72; */
+                font-weight: 700;
+                font-size: 1.25rem;
+            }
+            .secondslider .slick-dots {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                padding: 1rem 0;
+                list-style-type: none;
+            }
+            .secondslider .slick-dots li {
+                margin: 0 0.25rem;
+            }
+            .secondslider .slick-dots button {
+                display: block;
+                width: 1rem;
+                height: .4rem;
+                padding: 0;
+                border: none;
+                border-radius: 35px;
+                background-color: #D0D0D0;
+                text-indent: -9999px;
+            }
+            .secondslider .slick-dots li.slick-active button {
+                background-color: #737373;
+            }
+            .secondslider .slider-container1 {
+                transition-duration: 1000ms;
+                background-color: #D5F8FD;
+            }
+            .firstslider {
+                display: none;
+            }
+            .slider-container1 {
+                height: 100vh;
+                overflow: auto;
+            }
+            .secondslider .img-fluid {
+                max-width: 100%;
+                height: auto;
+                width: 100%;
+            }
+            .awesomewebb-4 {
+                margin: 0 0 8px;
+            }
+        }
+        /******************************************/
+        
+        @media only screen and (max-width:500px) {
+            .yourstruly h2 {
+                /* color: #ED0C36; */
+                font-size: 10vw;
+                font-family: NanumMyeongjo;
+                font-weight: 600;
+            }
+            .yourstruly p {
+                font-size: 1rem;
+            }
+            .yourstruly span {
+                /* color: #ED0C36; */
+                font-weight: 700;
+                font-size: 1rem;
+            }
+            .drinkbev h2 {
+                color: #DE2427;
+                font-size: 10vw;
+                font-family: NanumMyeongjo;
+                font-weight: 600;
+            }
+            .drinkbev p {
+                font-size: 1rem;
+            }
+            .drinkbev span {
+                /* color: #DE2427; */
+                font-weight: 700;
+                font-size: 1rem;
+            }
+            .awesomewebb h2 {
+                /* color: #1B7311; */
+                font-size: 10vw;
+                font-family: NanumMyeongjo;
+                font-weight: 600;
+            }
+            .awesomewebb p {
+                font-size: 1rem;
+                color: #000;
+            }
+            .awesomewebb span {
+                /* color: #5A2367; */
+                font-weight: 700;
+                font-size: 1rem;
+            }
+            .labella h2 {
+                /* color: #B79A72; */
+                font-size: 10vw;
+                font-family: NanumMyeongjo;
+                font-weight: 600;
+            }
+            .labella p {
+                font-size: 1rem;
+                /* color: white; */
+            }
+            .labella span {
+                /* color: #B79A72; */
+                font-weight: 700;
+                font-size: 1rem;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+        
+        .awesomewebb h2 {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out 0s forwards;
+            animation-delay: 0.2s;
+        }
+        
+        .awesomewebb p {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out 0s forwards;
+            animation-delay: 0.6s;
+        }
+        
+        .awesomewebb span {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out 0s forwards;
+            animation-delay: 1s;
+        }
+        /*    @-webkit-keyframes bounceInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-2000px);
+	}
+	60% {
+		-webkit-transform: translateX(20px);
+	}
+
+	80% {
+		-webkit-transform: translateX(-5px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}*/
+        
+        div#animatedHeading {
+            height: 100%;
+        }
+        
+        .slick-list.draggable {
+            height: 100%;
+        }
+        
+        .slick-track {
+            height: 100%;
+        }
+        
+        .awesomewebb {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .awesomewebb {
+            border-left: 24px solid #022C5B;
+            padding-left: 48px;
+        }
+        
+        .yourstruly {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .yourstruly {
+            border-left: 24px solid #1C2682;
+            padding-left: 48px;
+        }
+
+        .labella {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .labella {
+            border-left: 24px solid #970030;
+            padding-left: 48px;
+            }
+
+        .labella-2 {
+            position: absolute;
+            bottom: 100px;
+        }
+        
+        .awesomewebb-2 {
+            position: absolute;
+            bottom: 100px;
+        }
+        
+        .yourstruly-2 {
+            position: absolute;
+            bottom: 100px;
+        }
+        
+        .awesomewebb-3 {
+            position: absolute;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container-fluid firstslider ">
+        <div class="row justify-content-center abc slider-container">
+            <div class="col-lg-6 px-0">
+
+                <div class="slider-for" id="animatedHeading">
+                    <div>
+                        <div class="awesomewebb">
+                            <div class="awesomewebb-3">
+                                <a class="case-study-1" href="./1.html">
+                                    <span><i class="fas fa-arrow-left"></i> BACK TO HOME </span>
+                                </a>
+                            </div>
+                            <div class="awesomewebb-1">
+                                <h2>Checkupmeds</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si</p>
+                            </div>
+                            <div class="awesomewebb-2">
+                                <a class="case-study-1" href="checkupmeds.html">
+                                    <span>OPEN CASE STUDY <i class="fas fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="yourstruly">
+                            <div class="awesomewebb-3">
+                                <a class="case-study-1" href="./1.html ">
+                                    <span><i class="fas fa-arrow-left"></i> BACK TO HOME </span>
+                                </a>
+                            </div>
+                            <div class="yourstruly-1">
+                                <h2>CZUR</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si</p>
+                            </div>
+                            <div class="yourstruly-2">
+                                <a class="case-study-1" href="czur-explain.html">
+                                    <span>OPEN CASE STUDY <i class="fas fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+
+
+                        <div class="labella">
+                            <div class="awesomewebb-3">
+                                <a class="case-study-1" href="./1.html ">
+                                    <span><i class="fas fa-arrow-left"></i> BACK TO HOME </span>
+                                </a>
+                            </div>
+                            <div class="labella-1">
+                                <h2>Print By Susu</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si</p>
+                            </div>
+                            <div class="labella-2">
+                                <a class="case-study-1" href="print-by-susu.html">
+                                    <span>OPEN CASE STUDY <i class="fas fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div>
+                        <div class="drinkbev">
+                            <h2>DrinkBev</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si</p>
+                            <a class="case-study-1" href="#">
+                                <span>OPEN CASE STUDY <i class="fas fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-6">
+                <div class="slider-nav">
+                    <div class="slide" data-color="#D5F8FD"><img src="images/44.png" class="img-fluid" alt=""></div>
+                    <div class="slide" data-color="#D4D8FD"><img src="images/55.png" class="img-fluid" alt=""></div>
+                    <div class="slide" data-color="#FFD3E1"><img src="images/66.png" class="img-fluid" alt=""></div>
+                    <!-- <div class="slide" data-color="#F9D6D7"><img src="images/Vector 1 (1) 2.png" class="img-fluid" alt=""></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid secondslider">
+        <div class="row align-items-center flex-column flex-nowrap  justify-content-start slider-container1">
+
+
+
+
+            <div class="col-12 mx-auto pt-3 pb-2 px-0 m-0 " id="your-slider">
+                <div class="slider-nav1">
+                    <div class="slide" data-color="#D5F8FD"><img src="images/444.png" class="img-fluid  px-3" alt=""></div>
+                    <div class="slide" data-color="#D4D8FD"><img src="images/555.png" class="img-fluid  px-3" alt=""></div>
+                    <div class="slide" data-color="#FFD3E1"><img src="images/666.png" class="img-fluid  px-3" alt=""></div>
+                    <!-- <div class="slide" data-color="#F9D6D7"><img src="images/drinkbev.jpg" class="img-fluid  px-3" alt=""></div> -->
+                </div>
+            </div>
+
+
+            <div class="col-12 pb-5 px-3">
+                <div class="slider-for1">
+                    <div>
+                        <div class="awesomewebb border-0">
+                            <div class="awesomewebb-4">
+                                <a class="case-study-1" href="index.html#Indexportfoliopage ">
+                                    <span><i class="fas fa-arrow-left"></i> BACK TO HOME </span>
+                                </a>
+                            </div>
+                            <h2>Checkupmeds</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si</p>
+                            <a class="case-study-1" href="checkupmeds.html">
+                                <span>OPEN CASE STUDY <i class="fas fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="yourstruly border-0">
+                            <div data-aos="fade-right">
+                                <div class="awesomewebb-4">
+                                    <a class="case-study-1" href="index.html#Indexportfoliopage ">
+                                        <span><i class="fas fa-arrow-left"></i> BACK TO HOME </span>
+                                    </a>
+                                </div>
+                                <h2>CZUR</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si</p>
+                                <a class="case-study-1" href="czur-explain.html">
+                                    <span>OPEN CASE STUDY <i class="fas fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+
+
+                        <div class="labella border-0">
+                            <div data-aos="fade-right">
+                                <div class="awesomewebb-4">
+                                    <a class="case-study-1" href="index.html#Indexportfoliopage ">
+                                        <span><i class="fas fa-arrow-left"></i> BACK TO HOME </span>
+                                    </a>
+                                </div>
+                                <h2>Print By Susu</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si</p>
+                                <a class="case-study-1" href="print-by-susu.html">
+                                    <span>OPEN CASE STUDY <i class="fas fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div>
+                        <div class="drinkbev">
+                            <div data-aos="fade-right">
+                                <h2>DrinkBev</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si</p>
+                                <a class="case-study-1" href="#">
+                                    <span>OPEN CASE STUDY <i class="fas fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+
+
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                speed: 1000,
+                swipe: false,
+                infinite: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+
+            const slider = $(".slider-nav");
+            $('.slider-nav').slick({
+                dots: true,
+                speed: 1000,
+                centerMode: true,
+                vertical: true,
+                slidesToShow: 1,
+                infinite: false,
+                slidesToScroll: 1,
+                verticalSwiping: false,
+                asNavFor: '.slider-for',
+                focusOnSelect: true,
+                arrows: false,
+                centerPadding: '16.3vh',
+                useTransform: true,
+                cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
+                responsive: [{
+                    breakpoint: 1601,
+                    settings: {
+                        centerPadding: '20vh',
+                    }
+                }, {
+                    breakpoint: 1441,
+                    settings: {
+                        centerPadding: '21.3vh',
+                    }
+                }, {
+                    breakpoint: 1367,
+                    settings: {
+                        centerPadding: '24.3vh',
+                    }
+                }, {
+                    breakpoint: 1153,
+                    settings: {
+                        centerPadding: '26.5vh',
+                    }
+                }, {
+                    breakpoint: 1025,
+                    settings: {
+                        centerPadding: '29.3vh',
+                    }
+                }]
+            });
+
+            slider.on('wheel', (function(e) {
+                e.preventDefault();
+
+                if (e.originalEvent.deltaY < 0) {
+                    $(this).slick('slickPrev');
+                } else {
+                    $(this).slick('slickNext');
+                }
+                const setColor = (ele) => {
+                    if (ele.data("color")) {
+                        ele.closest(".slider-container").css("background-color", ele.data("color"));
+                    }
+                };
+
+                $(".slider-nav")
+                    .on("init", (slick) => {
+                        setColor($(slick.target).find(".slick-current"));
+                    })
+                    .slick()
+                    .on("beforeChange", (event, slick, currentSlide, nextSlide) => {
+                        setColor(slick.$slider.find(`[data-slick-index=${nextSlide}]`));
+                    });
+
+            }));
+
+
+            $("button#slick-slide-control10").click(function() {
+                $(".slider-container").css("background-color", "#D5F8FD");
+            });
+            $("button#slick-slide-control11").click(function() {
+                $(".slider-container").css("background-color", "#D4D8FD");
+            });
+            $("button#slick-slide-control12").click(function() {
+                $(".slider-container").css("background-color", "#FFD3E1");
+            });
+            $("button#slick-slide-control13").click(function() {
+                $(".slider-container").css("background-color", "#F9D6D7");
+            });
+
+
+            /*********************************************************************/
+
+
+
+            $('.slider-nav1').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for1',
+                dots: true,
+                infinite: true,
+                arrows: false,
+                speed: 1000,
+                focusOnSelect: true
+            });
+
+            const setColor = (ele) => {
+                if (ele.data("color")) {
+                    ele.closest(".slider-container1").css("background-color", ele.data("color"));
+                }
+            };
+
+            $("#your-slider")
+                .on("init", (slick) => {
+                    setColor($(slick.target).find(".slick-active"));
+                })
+                .slick()
+                .on("beforeChange", (event, slick, currentSlide, nextSlide) => {
+                    setColor(slick.$slider.find(`[data-slick-index=${nextSlide}]`));
+                });
+
+            $("button#slick-slide-control00").click(function() {
+                $(".slider-container").css("background-color", "#F5F8FF");
+            });
+            $("button#slick-slide-control01").click(function() {
+                $(".slider-container").css("background-color", "#FFCA50");
+            });
+            $("button#slick-slide-control02").click(function() {
+                $(".slider-container").css("background-color", "#871629");
+            });
+            $("button#slick-slide-control03").click(function() {
+                $(".slider-container").css("background-color", "#F9D6D7");
+            });
+
+
+            $('.slider-for1').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                infinte: true,
+                fade: true,
+                swipe: true,
+                speed: 1000,
+                asNavFor: '.slider-nav1'
+            });
+
+
+
+
+        });
+    </script>
+
+
+</body>
+
+</html>

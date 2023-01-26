@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+      
+      
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>B2B</title>
+      
+
+    
+  </head>
+  <body>
+      
+      
+      
+      
+      
+<nav class="navbar navbar-expand-lg px-lg-5 gx-5 ">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="/index.html"><img src="images/logo-11-11 (1).svg" class="img-fluid " id="loading" alt=""></a>
+    
+    
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item text-lg-end">
+          <a href="./Animation.html" class="nav-link">Portfolio</a>
+        </li>
+      </ul>
+    </div>
+  
+</nav>
+      
+      
+      
+                                                               
+                                                             
+
+  <div class="slider-items">
+        
+<div>
+    <div class="row align-items-center justify-content-center branding">
+        <div class="overlay">
+        <div class="col-12">
+            
+            
+
+            
+            <h2>BRANDING</h2>
+            
+            <a href="./1.html">EXPLORE</a>
+    
+        </div>
+    </div>
+    </div>
+        </div>
+      
+      
+      
+<div>
+    <div class="row align-items-center justify-content-center animation">
+        <div class="overlay">
+        <div class="col-12">
+        
+    
+                                                             
+ 
+            <h2>ANIMATION</h2>
+            
+            <a href="./animation.html">EXPLORE</a>
+            
+        </div>
+    </div>
+    </div>
+        </div>
+      
+      
+      
+      
+<div>
+    <div class="row align-items-center justify-content-center webdesign">
+        <div class="overlay">
+        <div class="col-12">
+        
+    
+        <h2>WEB DESIGN</h2>
+            
+        <a href="./web-design.html">EXPLORE</a>
+            
+            
+        </div>
+    </div>
+    </div>
+        </div>
+      
+      
+      
+<div>
+    <div class="row align-items-center justify-content-center marketing">
+        <div class="overlay">
+        <div class="col-12">
+        
+    
+                                                             
+        <h2>MARKETING</h2>
+            
+        <a href="./marketing.html">EXPLORE</a>
+            
+            
+            
+        </div>
+    </div>
+    </div>
+        </div>
+
+      </div>  
+
+
+      
+
+            
+      
+      
+    
+
+
+    <!-- Bootstrap Bundle with Popper -->
+      
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+const slider = $(".slider-items");
+slider
+  .slick({
+    dots: true,
+  infinite: true,
+  fade:true,    
+  speed: 1000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+  });
+
+slider.on('wheel', (function(e) {
+  e.preventDefault();
+
+  if (e.originalEvent.deltaY < 0) {
+    $(this).slick('slickPrev');
+  } else {
+    $(this).slick('slickNext');
+  }
+}));
+    
+    
+      </script>
+
+      
+      
+  </body>
+</html>
